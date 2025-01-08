@@ -8,6 +8,7 @@ environment:
 
 # Add regular dependencies here.
 dependencies:
+  freezed_annotation: ^2.4.4
   # path: ^1.8.0
 
 dev_dependencies:
