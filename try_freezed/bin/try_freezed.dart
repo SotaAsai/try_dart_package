@@ -28,4 +28,11 @@ void main(List<String> arguments) {
   print(todo);
   final todo2 = todo.copyWith(title: "生成AIの学習", detail: "『コード×AI』の読了");
   print(todo2);
+  //以下はエラーが発生。freezedパッケージのReadmeにヒントがある
+  // final todo3 = Todo.fromJson({
+  //   "title": "Firebaseの学習",
+  //   "detail": "youtubeチャンネルの最新動画を視聴",
+  //   "dueDate": DateTime(2025, 2, 5)
+  // });
+  // print(todo3);
 }
