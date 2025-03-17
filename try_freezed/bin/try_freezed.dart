@@ -46,7 +46,7 @@ void main(List<String> arguments) {
   print(model2);
   print("${model.toJson()}");
   print("${model2.toJson()}");
-  
+  // specific constructorの場合だとプロパティにアクセスできない
   // final a = model.a;
 
   final modelFromJson = Model.fromJson(model.toJson());
