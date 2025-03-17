@@ -1,4 +1,5 @@
 import 'package:try_freezed/freezed/book.dart';
+import 'package:try_freezed/freezed/model.dart';
 import 'package:try_freezed/freezed/person.dart';
 import 'package:try_freezed/freezed/todo.dart';
 // import 'package:try_freezed/try_freezed.dart' as try_freezed;
@@ -35,4 +36,15 @@ void main(List<String> arguments) {
   //   "dueDate": DateTime(2025, 2, 5)
   // });
   // print(todo3);
+
+  print('Modelの出力');
+  final model = Model.first("rectangle");
+  print(model);
+  final model2 = Model.second(34, false);
+  print(model2);
+  print("${model.toJson()}");
+  print("${model2.toJson()}");
+
+  final modelFromJson = Model.fromJson(model.toJson());
+  print(modelFromJson);
 }
