@@ -27,6 +27,8 @@ void main(List<String> arguments) {
       detail: "公式ドキュメントの読み込み",
       dueDate: DateTime(2025, 1, 31));
   print(todo);
+  final title = todo.title;
+  print('タイトル：${todo.title}');
   final todo2 = todo.copyWith(title: "生成AIの学習", detail: "『コード×AI』の読了");
   print(todo2);
   //以下はエラーが発生。freezedパッケージのReadmeにヒントがある
@@ -44,6 +46,8 @@ void main(List<String> arguments) {
   print(model2);
   print("${model.toJson()}");
   print("${model2.toJson()}");
+  
+  // final a = model.a;
 
   final modelFromJson = Model.fromJson(model.toJson());
   print(modelFromJson);
