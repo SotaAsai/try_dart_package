@@ -4,6 +4,7 @@ import 'package:try_freezed/freezed/person.dart';
 import 'package:try_freezed/freezed/todo.dart';
 import 'package:try_freezed/json_serializable/js_person.dart';
 import 'package:try_freezed/json_serializable/sample1.dart';
+import 'package:try_freezed/json_serializable/sample3.dart';
 // import 'package:try_freezed/try_freezed.dart' as try_freezed;
 
 void main(List<String> arguments) {
@@ -23,7 +24,13 @@ void main(List<String> arguments) {
    生成されたコードを見れば例外が発生するのは明らか
    instance.value.toJson()と手動で変更すると動く
    */
-  print(Sample1.fromJson(sample1.toJson()));
+  // print(Sample1.fromJson(sample1.toJson()));
+
+  final sample3 = Sample3(DateTime.now());
+  print(sample3);
+  print(sample3.toJson());
+  final sample3_2 = Sample3.fromJson(sample3.toJson());
+  print(sample3_2.value);
 }
 
 void _execute() {
