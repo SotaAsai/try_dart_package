@@ -5,6 +5,7 @@ import 'package:try_freezed/freezed/todo.dart';
 import 'package:try_freezed/json_serializable/js_person.dart';
 import 'package:try_freezed/json_serializable/sample1.dart';
 import 'package:try_freezed/json_serializable/sample3.dart';
+import 'package:try_freezed/json_serializable/sample4.dart';
 // import 'package:try_freezed/try_freezed.dart' as try_freezed;
 
 void main(List<String> arguments) {
@@ -31,6 +32,12 @@ void main(List<String> arguments) {
   print(sample3.toJson());
   final sample3_2 = Sample3.fromJson(sample3.toJson());
   print(sample3_2.value);
+
+  final sample4 = Sample4(DateTime.now());
+  print(sample4);
+  print(sample3.toJson());
+  final sample4_2 = Sample3.fromJson(sample3.toJson());
+  print(sample4_2.value);
 }
 
 void _execute() {
