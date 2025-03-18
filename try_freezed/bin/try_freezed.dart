@@ -2,10 +2,21 @@ import 'package:try_freezed/freezed/book.dart';
 import 'package:try_freezed/freezed/model.dart';
 import 'package:try_freezed/freezed/person.dart';
 import 'package:try_freezed/freezed/todo.dart';
+import 'package:try_freezed/js_person.dart';
 // import 'package:try_freezed/try_freezed.dart' as try_freezed;
 
 void main(List<String> arguments) {
   // print('Hello world: ${try_freezed.calculate()}!');
+
+  // _execute();
+
+  final jsPerson = JSPerson(firstName: '卓也', lastName: '大西');
+  print(jsPerson);
+  print(jsPerson.toJson());
+  print(JSPerson.fromJson(jsPerson.toJson()));
+}
+
+void _execute() {
   print("Personの出力");
   final person = Person(firstName: "taro", lastName: "tanaka", age: 34);
   print(person);
