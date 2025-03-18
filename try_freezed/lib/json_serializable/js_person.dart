@@ -2,7 +2,6 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'js_person.g.dart';
 
-// json_serializable単体の挙動のチェック
 @JsonSerializable()
 class JSPerson {
   final String firstName, lastName;
