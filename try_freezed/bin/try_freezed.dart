@@ -2,7 +2,8 @@ import 'package:try_freezed/freezed/book.dart';
 import 'package:try_freezed/freezed/model.dart';
 import 'package:try_freezed/freezed/person.dart';
 import 'package:try_freezed/freezed/todo.dart';
-import 'package:try_freezed/js_person.dart';
+import 'package:try_freezed/json_serializable/js_person.dart';
+import 'package:try_freezed/json_serializable/sample1.dart';
 // import 'package:try_freezed/try_freezed.dart' as try_freezed;
 
 void main(List<String> arguments) {
@@ -14,6 +15,15 @@ void main(List<String> arguments) {
   print(jsPerson);
   print(jsPerson.toJson());
   print(JSPerson.fromJson(jsPerson.toJson()));
+
+  final sample1 = Sample1(Sample2(8));
+  print(sample1);
+  print(sample1.toJson());
+  /*
+   生成されたコードを見れば例外が発生するのは明らか
+   instance.value.toJson()と手動で変更すると動く
+   */
+  print(Sample1.fromJson(sample1.toJson()));
 }
 
 void _execute() {
